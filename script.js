@@ -1,14 +1,21 @@
 function fibonacci(num) {
 // your code here
-	let num1 = 0;
-	let num2 = 1;
-	let arr = [num1, num2]
-	for (let index = 1; index < num; index++) {
-		arr[index + 1] = num1 + num2;
-		num1 = num2;
-		num2 = arr[index + 1];
-	}
-	return arr[index+1];
+	let n1 = 0;
+        let n2 = 1;
+        if(n == 0){
+            return 0;
+        }
+        else if(n == 1){
+            return 1;
+        }
+        else{
+            for (let i = 1; i < n; i++) {
+                let n3 = n1 + n2;
+                n1 = n2;
+                n2 = n3;
+             }
+             return n2;
+        }   
 }
 
 module.exports = fibonacci;
